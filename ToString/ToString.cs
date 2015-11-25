@@ -19,7 +19,10 @@ namespace Vsite.CSharp
 
         // TODO: Implementirati metodu ToString tako da vraća niz u obliku: "2+3j"
         // (ako je implementacija ispravna, metoda Main bi se trebala izvesti bez problema)
-
+        public override string ToString()
+        {
+            return string.Format("{0}+{1}j", Realni, Imaginarni);
+        }
 
     }
 
