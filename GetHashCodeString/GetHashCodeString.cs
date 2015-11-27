@@ -15,6 +15,13 @@ namespace Vsite.CSharp
             Console.WriteLine("car".GetHashCode());
             Console.WriteLine("cut".GetHashCode());
 
+            object o1 = new Object();
+            object o2 = new Object();
+            object o3 = new Object();
+            Console.WriteLine("01".GetHashCode());
+            Console.WriteLine("02".GetHashCode());
+            Console.WriteLine("03".GetHashCode());
+
             Console.ReadKey();
         }
     }

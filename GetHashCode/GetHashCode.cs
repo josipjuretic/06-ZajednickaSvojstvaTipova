@@ -19,14 +19,24 @@ namespace GetHashCode
 
         public override bool Equals(object obj)
         {
-            // TODO: Prekopirati implementaciju metode Equals iz EqualsRefTip1
+            // Prekopirati implementaciju metode Equals iz EqualsRefTip1
 
-
-            return true;
+            if (obj == null)
+                return false;
+            if (this.GetType() != obj.GetType())
+                return false;
+            Osoba drugi = (Osoba)obj;
+           // m_ime.Equals(drugi.m_ime)
+                if (Osoba.Equals(this.m_ime, drugi.m_ime) == false)
+                    return false;
+                return m_matičniBroj.Equals(drugi.m_matičniBroj);
         }
 
-        // TODO: Implementirati metodu GetHashCode tako da se metoda Main može izvesti bez problema
-
+        // Implementirati metodu GetHashCode tako da se metoda Main može izvesti bez problema
+        public override int GetHashCode() m.matičniBroj.GetHashCode;
+        {
+            return m_ime.GetHashCode();
+        }
         
         
         public override string ToString()
@@ -44,9 +54,9 @@ namespace GetHashCode
             mjestaRođenja[new Osoba("Janko", 2)] = "Jarče Polje";
             mjestaRođenja[new Osoba("Darko", 3)] = "Vukova Gorica";
 
-            Console.WriteLine(mjestaRođenja[new Osoba("Pero", 1)]);
-            Console.WriteLine(mjestaRođenja[new Osoba("Janko", 2)]);
-            Console.WriteLine(mjestaRođenja[new Osoba("Darko", 3)]);
+            //Console.WriteLine(mjestaRođenja[new Osoba("Pero", 1)]);
+            //Console.WriteLine(mjestaRođenja[new Osoba("Janko", 2)]);
+            //Console.WriteLine(mjestaRođenja[new Osoba("Darko", 3)]);
 
             Console.ReadKey();
 
